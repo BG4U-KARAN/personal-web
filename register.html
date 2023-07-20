@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profectional-webstite</title>
+    <style>
+        body {
+            /* background: url(image/3d08e03cb40252526fee2036a67f07f1.gif) no-repeat; */
+            /* background: url(image/AbandonedNecessaryCapeghostfrog-size_restricted.gif); */
+            background: url(image/BrokenReadyEchidna-size_restricted.gif);
+            /* background-color: rgb(5, 228, 253); */
+            /* backdrop-filter: blur(10px); */
+            background-size: cover;
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap-reverse;
+            border: 1px solid white;
+            text-align: center;
+            margin-top: 15%;
+            margin-left: 27.5%;
+            width: 40%;
+            height: 70%;
+            /* height: 7cm; */
+            /* background: url(image/AchingSilkyFoal-size_restricted.gif) no-repeat; */
+            background: url(image/giphy-downsized-large.gif);
+            background-size: cover;
+            /* background-color: black; */
+            border-radius: 10px;
+            border: none;
+        }
+
+        .card h2 {
+            margin: -3%;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+
+
+        .card .image {
+            margin-right: 5px;
+            padding: 10px;
+        }
+
+        .card .image img {
+            width: 200px;
+            position: relative;
+        }
+
+        .card>.content {
+            flex: 1 0 10rem;
+            padding-top: 25px;
+        }
+
+        .card .content .input-box {
+            width: 100%;
+            height: 30%;
+        }
+
+        .card .content .input-box input {
+            border-radius: 7px;
+            border-color: green;
+        }
+
+        .card .content .input-box label {
+            color: aliceblue;
+        }
+
+        .card .content .btn input {
+            width: 50%;
+            height: 20px;
+            background: black;
+            color: aliceblue;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+            border-color: aliceblue;
+        }
+
+        @media (max-width:584px) {
+            .card {
+                text-align: center;
+                justify-content: center;
+                display: flex;
+                flex-wrap: wrap-reverse;
+                border: 1px solid black;
+                text-align: center;
+                margin-top: 15%;
+                margin-left: 22.5%;
+                width: 300px;
+                background-color: aquamarine;
+                border-radius: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <form action="./home.htm" method="post">
+        <div class="card">
+            <div class="image">
+                <img src="./image/download.gif" alt="img_not_found"> <br>
+            </div>
+            <div class="content">
+                <h2 id="h2">HACK'S FORM</h2> <br> <br>
+                <div class="input-box">
+                    <label>HACKER-ID</label> <br>
+                    <input type="number" name="id" id="id"> <br> <br>
+                </div>
+                <div class="input-box">
+                    <label>HASH-PASS</label> <br>
+                    <input type="password" name="pass" id="pass"> <br> <br>
+                </div>
+                <div class="btn">
+                    <input type="submit" id="btn"><br>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <script>
+        var colors = ["blue", "yellow", "red", "orange", "white"]
+        var currentColor = 0
+        var lis = document.querySelectorAll("h2");
+
+        function changeColor() {
+            --currentColor
+            if (currentColor < 0) currentColor = colors.length - 1
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.color = colors[(currentColor + i) % colors.length]
+            }
+        }
+
+        setInterval(changeColor, 1000)
+
+
+    </script>
+
+</body>
+
+</html>
