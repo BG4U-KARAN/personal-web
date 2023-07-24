@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+            background: url(image/084974294_main_xxl.gif) no-repeat;
+            background-size: cover;
+        }
+
+        h1 {
+            text-align: center;
+            animation: move 3s infinite;
+            color: #fff;
+        }
+
+        @keyframes move {
+            0% {
+                transform: scale(-50%);
+                opacity: 1;
+            }
+
+            25% {
+                transform: scaleX(-50%);
+                opacity: 0;
+            }
+            50% {
+                transform: rotateY(-50%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>YOU'RE NOW HACKED</h1>
+    <script>
+        var colors = ["#1f51ff", "#ffff00", "red", "orange", "#00ff00", "#ccff00", "#ff00ff"]
+        var currentColor = 0
+        var lis = document.querySelectorAll("h1");
+
+        function changeColor() {
+            --currentColor
+            if (currentColor < 0) currentColor = colors.length - 1
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.color = colors[(currentColor + i) % colors.length]
+            }
+        }
+
+        setInterval(changeColor, 3000)
+    </script>
+</body>
+
+</html>
